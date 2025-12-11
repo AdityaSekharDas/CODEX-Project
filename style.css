@@ -78,7 +78,7 @@ button:hover{
   background: radial-gradient(circle at 30% 30%, #fff9b0, #ffd84d, #ffb300);
   top: -50px;             
   pointer-events: auto;
-  animation: fall 3s linear forwards;
+  animation: fall 7s linear forwards;
 }
 
 @keyframes fall {
