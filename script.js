@@ -7,14 +7,11 @@ startBtn.addEventListener("click", function () {
     let bubble = document.createElement("div");
     bubble.className = "bubble";
 
-    
     const maxLeft = rightBox.clientWidth - 60;
     bubble.style.left = Math.floor(Math.random() * maxLeft) + "px";
 
-    
     rightBox.appendChild(bubble);
 
-    
     setTimeout(function () {
       bubble.remove();
     }, 3000);
