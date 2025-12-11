@@ -1,13 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubble Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Two-column layout (simple)</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
-    <script src="script.js"></script>
+  <div class="page">
+    <aside class="left-col">
+      <div class="mini-box" aria-hidden="true"></div>
+
+      <div class="btn-row">
+        <button class="btn start">Start</button>
+        <button class="btn stop">Stop</button>
+      </div>
+    </aside>
+
+    <main class="right-col">
+      <div class="content-placeholder">
+        <!-- large right area (for content / canvas / game, etc.) -->
+        <p>Right content area</p>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
