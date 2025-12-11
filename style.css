@@ -1,109 +1,79 @@
-/* Basic reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-html, body {
-  height: 100%;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: #fbfbfd;
-  color: #222;
+body{
+    margin:0;
+    padding:0;
+    background:black;
+    font-family: Arial, sans-serif;
+    color:white;
 }
-
-/* Outer container splits screen horizontally into left and right */
-.page {
-  display: flex;
-  gap: 24px;
-  padding: 28px;
-  min-height: 100vh;
-  align-items: stretch;
+.container{
+    display:flex;
+    height:100vh;
+    gap:20px;
+    padding:20px;
+    box-sizing:border-box;
 }
-
-/* Left narrow column */
-.left-col {
-  width: 220px;                 /* narrow left column like your sketch */
-  background: linear-gradient(180deg, #ffffff 0%, #f3f6ff 100%);
-  border: 1px solid rgba(18,35,80,0.06);
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* pushes buttons to bottom */
-  align-items: center;
-  padding: 18px;
-  box-shadow: 0 6px 18px rgba(21,32,80,0.06);
+.sidebar{
+    width:300px;
+    display:flex;
+    flex-direction:column;
+    margin-right:20px;
 }
-
-/* small square box near the top inside left column */
-.mini-box {
-  width: 140px;
-  height: 140px;
-  background: linear-gradient(135deg,#e6f0ff,#dfe9ff);
-  border-radius: 8px;
-  border: 2px dashed rgba(30,60,120,0.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #3b4a86;
-  font-weight: 600;
-  font-size: 14px;
+.stack-box{
+    width:100%;
+    height:120px;
+    background:#222;
+    border:1px solid white;
+    border-radius:8px;
+    margin-bottom:20px;
+    padding:10px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column-reverse;
 }
-
-/* Button row at the bottom, centered horizontally */
-.btn-row {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 8px;
+.sorted-box{
+    width:100%;
+    height:120px;
+    background:#222;
+    border:1px solid white;
+    border-radius:8px;
+    margin-bottom:20px;
+    padding:10px;
+    overflow-x:auto;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:10px;
 }
-
-/* Common button style */
-.btn {
-  min-width: 76px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  box-shadow: 0 6px 12px rgba(35,50,110,0.06);
+.button-container{
+    display:flex;
+    justify-content: space-between;
 }
-
-/* Start / Stop colors */
-.btn.start {
-  background: linear-gradient(180deg,#38b2ac,#2aa59a);
-  color: white;
+button{
+    width: 120px;
+    height:50px;
+    background:deepskyblue;
+    color:black;
+    border:none;
+    border-radius: 8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
 }
-
-.btn.stop {
-  background: linear-gradient(180deg,#ff7a7a,#ff5757);
-  color: white;
+button:hover{
+    background: deepskyblue;
 }
-
-/* Right big content area */
-.right-col {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.game-area{
+    flex:1;
+    background:#111;
+    border-radius:10px;
+    border:2px solid white;
+    position: relative;
+    overflow: hidden;
 }
-
-/* The large rectangle like in the sketch */
-.content-placeholder {
-  width: 100%;
-  height: 56vh; /* big area */
-  border-radius: 12px;
-  background: linear-gradient(180deg,#ffffff,#f7f9ff);
-  border: 2px solid rgba(30,60,120,0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6b7280;
-  font-size: 18px;
-}
-
-/* Responsive tweaks for small screens */
-@media (max-width: 640px) {
-  .page { flex-direction: column; gap: 16px; padding: 14px; }
-  .left-col { width: 100%; flex-direction: row; justify-content: space-between; padding: 12px; }
-  .mini-box { width: 84px; height: 84px; }
-  .btn-row { gap: 8px; }
-  .content-placeholder { height: 46vh; }
+.bubble{
+    position:absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: yellow;
 }

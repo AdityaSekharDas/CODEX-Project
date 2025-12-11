@@ -7,22 +7,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="page">
-    <aside class="left-col">
-      <div class="mini-box" aria-hidden="true"></div>
+    <div class="container">
 
-      <div class="btn-row">
-        <button class="btn start">Start</button>
-        <button class="btn stop">Stop</button>
-      </div>
-    </aside>
+        <div class="sidebar">
+            <h3>Stack</h3>
+            <div class="stack-box" id="stackBox"></div>
 
-    <main class="right-col">
-      <div class="content-placeholder">
-        <!-- large right area (for content / canvas / game, etc.) -->
-        <p>Right content area</p>
-      </div>
-    </main>
-  </div>
+            <h3>Sorted Output</h3>
+            <div class="sorted-box" id="sortedBox"></div>
+
+            <div class="button-container">
+            <button id="startBtn">START</button>
+            <button id="stopBtn">STOP</button>
+            </div>
+
+        </div>
+        <div class="game-area" id="gameArea"></div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
