@@ -70,10 +70,22 @@ button:hover{
     position: relative;
     overflow: hidden;
 }
-.bubble{
-    position:absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: yellow;
+.bubble {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff9b0, #ffd84d, #ffb300);
+  top: -50px;             
+  pointer-events: auto;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(120vh);  
+  }
 }
