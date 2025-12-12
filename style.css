@@ -28,8 +28,7 @@ body{
     padding:10px;
     overflow-y:auto;
     display:flex;
-    flex-direction:row;
-    gap: 10px;
+    flex-direction:column-reverse;
 }
 .sorted-box{
     width:100%;
