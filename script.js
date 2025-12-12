@@ -54,9 +54,23 @@ stopBtn.addEventListener("click",function (){
 });
 
 function performBubbleSort(){
-
+for(let i=0;i<stack.length;i++){
+  for(let j=0;j<stack.length;j++){
+    if(stack[j]>stack[j+1]){
+       let temp = stack[j];
+       stack[j] = stack[j + 1];
+       stack[j + 1] = temp;
+    }
+  }
+}
 }
 
 function displaySortedOutput(){
-
+   stack.forEach((num, index) => {
+        setTimeout(() => {
+            let item = document.createElement("div");
+            item.innerText = num;
+            sortedBox.appendChild(item);
+        }, index * 300);
+    });
 }
